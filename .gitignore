@@ -1,0 +1,7 @@
+Build/bin*
+Build/log*
+Build/php*
+vendor
+cache.*
+composer*
+!composer.json
