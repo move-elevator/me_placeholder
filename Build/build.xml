@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project name="check-extension-me_extpowermail" default="check" basedir="../">
+<project name="check-extension-me_placeholder" default="check" basedir="../">
     <property name="output" location="${basedir}/build"/>
 
     <property name="php" value="php"/>

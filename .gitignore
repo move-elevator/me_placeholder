@@ -5,3 +5,4 @@ vendor
 cache.*
 composer*
 !composer.json
+MePlaceholder.iml
