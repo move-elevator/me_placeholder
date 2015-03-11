@@ -100,4 +100,3 @@ $TCA['tx_meplaceholder_records'] = array(
 		'1' => array('showitem' => 'starttime, endtime, fe_group')
 	)
 );
-?>

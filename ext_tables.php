@@ -24,4 +24,3 @@ $TCA['tx_meplaceholder_records'] = array(
 		'iconfile'          => t3lib_extMgm::extRelPath($_EXTKEY) . 'icon_tx_meplaceholder_records.gif',
 	),
 );
-?>
