@@ -11,11 +11,11 @@
  ***************************************************************/
 
 $EM_CONF[$_EXTKEY] = array(
-	'title' => 'move:elevator Platzhalter im Frontendcontent',
-	'description' => 'Ersätzt Platzhalte im Conten durch andere Inhalte.',
+	'title' => 'm:e Placeholder',
+	'description' => 'Find marker in page source code and replace it with editable content.',
 	'category' => 'be',
-	'author' => 'Jan Maennig',
-	'author_email' => 'jma@move-elevator.de',
+	'author' => 'move elevator GmbH',
+	'author_email' => 'cms-dev@move-elevator.de',
 	'shy' => '',
 	'dependencies' => '',
 	'conflicts' => '',
