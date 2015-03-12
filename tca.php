@@ -10,47 +10,47 @@ $TCA['tx_meplaceholder_records'] = array(
 	),
 	'feInterface' => $TCA['tx_meplaceholder_records']['feInterface'],
 	'columns' => array(
-		'hidden' => array(		
+		'hidden' => array(
 			'exclude' => 1,
-			'label'   => 'LLL:EXT:lang/locallang_general.xml:LGL.hidden',
-			'config'  => array(
-				'type'    => 'check',
+			'label' => 'LLL:EXT:lang/locallang_general.xml:LGL.hidden',
+			'config' => array(
+				'type' => 'check',
 				'default' => '0'
 			)
 		),
-		'starttime' => array(		
+		'starttime' => array(
 			'exclude' => 1,
-			'label'   => 'LLL:EXT:lang/locallang_general.xml:LGL.starttime',
-			'config'  => array(
-				'type'     => 'input',
-				'size'     => '8',
-				'max'      => '20',
-				'eval'     => 'date',
-				'default'  => '0',
+			'label' => 'LLL:EXT:lang/locallang_general.xml:LGL.starttime',
+			'config' => array(
+				'type' => 'input',
+				'size' => '8',
+				'max' => '20',
+				'eval' => 'date',
+				'default' => '0',
 				'checkbox' => '0'
 			)
 		),
-		'endtime' => array(		
+		'endtime' => array(
 			'exclude' => 1,
-			'label'   => 'LLL:EXT:lang/locallang_general.xml:LGL.endtime',
-			'config'  => array(
-				'type'     => 'input',
-				'size'     => '8',
-				'max'      => '20',
-				'eval'     => 'date',
+			'label' => 'LLL:EXT:lang/locallang_general.xml:LGL.endtime',
+			'config' => array(
+				'type' => 'input',
+				'size' => '8',
+				'max' => '20',
+				'eval' => 'date',
 				'checkbox' => '0',
-				'default'  => '0',
-				'range'    => array(
+				'default' => '0',
+				'range' => array(
 					'upper' => mktime(3, 14, 7, 1, 19, 2038),
-					'lower' => mktime(0, 0, 0, date('m')-1, date('d'), date('Y'))
+					'lower' => mktime(0, 0, 0, date('m') - 1, date('d'), date('Y'))
 				)
 			)
 		),
-		'fe_group' => array(		
+		'fe_group' => array(
 			'exclude' => 1,
-			'label'   => 'LLL:EXT:lang/locallang_general.xml:LGL.fe_group',
-			'config'  => array(
-				'type'  => 'select',
+			'label' => 'LLL:EXT:lang/locallang_general.xml:LGL.fe_group',
+			'config' => array(
+				'type' => 'select',
 				'items' => array(
 					array('', 0),
 					array('LLL:EXT:lang/locallang_general.xml:LGL.hide_at_login', -1),
@@ -60,13 +60,13 @@ $TCA['tx_meplaceholder_records'] = array(
 				'foreign_table' => 'fe_groups'
 			)
 		),
-		'placeholder' => array(		
-			'exclude' => 0,		
-			'label' => 'LLL:EXT:me_placeholder/locallang_db.xml:tx_meplaceholder_records.placeholder',		
+		'placeholder' => array(
+			'exclude' => 0,
+			'label' => 'LLL:EXT:me_placeholder/locallang_db.xml:tx_meplaceholder_records.placeholder',
 			'config' => array(
-				'type' => 'input',	
-				'size' => '30',	
-				'max' => '20',	
+				'type' => 'input',
+				'size' => '30',
+				'max' => '20',
 				'eval' => 'required,trim,alphanum_x,upper',
 			)
 		),

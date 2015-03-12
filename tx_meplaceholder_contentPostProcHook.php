@@ -20,7 +20,7 @@ class tx_meplaceholder_contentPostProcHook {
 	protected $t3Database;
 
 	/**
-	 * Initialize tx_meplaceholder_contentPostProcHook and generate settings
+	 * Initialize tx_meplaceholder_contentPostProcHook
 	 */
 	public function __construct() {
 		$this->t3Database = $GLOBALS['TYPO3_DB'];
@@ -39,13 +39,20 @@ class tx_meplaceholder_contentPostProcHook {
 	 * @return void
 	 */
 	public function contentPostProc_output($params, &$feObject) {
-		if (isset($feObject->config['config']['disable_meplaceholder']) && $feObject->config['config']['disable_meplaceholder'] === '1') {
+		if (
+			isset($feObject->config['config']['disable_meplaceholder'])
+			&& $feObject->config['config']['disable_meplaceholder'] === '1'
+		) {
 			return;
 		}
 
 		$rows = $this->getPlaceholderFromDatabase();
 		foreach ($rows as $row) {
-			$feObject->content = str_replace('###' . $row['placeholder'] . '###', $this->contentObject->stdWrap($row['content']), $feObject->content);
+			$feObject->content = str_replace(
+				'###' . $row['placeholder'] . '###',
+				$this->contentObject->stdWrap($row['content']),
+				$feObject->content
+			);
 		}
 		$feObject->content = preg_replace('/#{3}[A-Za-z0-9]{1,}#{3}/i', '', $feObject->content);
 	}
