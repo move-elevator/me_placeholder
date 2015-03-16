@@ -15,7 +15,7 @@ Find marker in source code and replace it with editable content. To edit content
 2015-03-11  Jan Maennig  <jma@move-elevator.de>
 
 	* Refactoring after reviews
-	
+
 2015-02-03  Jan Maennig  <jma@move-elevator.de>
 
 	* Add storage pid for placeholder records
