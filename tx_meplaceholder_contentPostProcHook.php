@@ -54,7 +54,7 @@ class tx_meplaceholder_contentPostProcHook {
 				$feObject->content
 			);
 		}
-		$feObject->content = preg_replace('/#{3}[A-Za-z0-9]{1,}#{3}/i', '', $feObject->content);
+		$feObject->content = preg_replace('/#{3}[A-Za-z0-9_]{1,}#{3}/i', '', $feObject->content);
 	}
 
 	/**
