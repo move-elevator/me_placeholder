@@ -12,30 +12,27 @@
 
 $EM_CONF[$_EXTKEY] = array(
 	'title' => 'm:e Placeholder',
-	'description' => 'Find marker in page source code and replace it with editable content.',
-	'category' => 'be',
-	'author' => 'move elevator GmbH',
-	'author_email' => 'cms-dev@move-elevator.de',
-	'shy' => '',
-	'dependencies' => '',
-	'conflicts' => '',
-	'priority' => '',
-	'module' => '',
-	'state' => 'stable',
-	'internal' => '',
-	'uploadfolder' => 0,
-	'createDirs' => '',
-	'modify_tables' => '',
-	'clearCacheOnLoad' => 0,
-	'lockType' => '',
-	'author_company' => '',
+	'description' => 'Find marker in source code and replace it with editable content. To edit content is a RTE available. For placeholder you can set a storage page id. Furthermore you can individual pages exclude from replacement.',
+	'category' => 'fe',
 	'version' => '1.0.0',
-	'constraints' => array(
-		'depends' => array(
-			'typo3' => '4.5.0-6.2.99',
+	'state' => 'stable',
+	'uploadfolder' => false,
+	'createDirs' => NULL,
+	'clearcacheonload' => false,
+	'author' => 'move:elevator',
+	'author_email' => 'typo3@move-elevator.de',
+	'author_company' => 'move:elevator',
+	'constraints' =>
+		array (
+			'depends' =>
+				array (
+					'typo3' => '4.5.0-6.2.99'
+				),
+			'conflicts' =>
+				array (
+				),
+			'suggests' =>
+				array (
+				),
 		),
-		'conflicts' => array(),
-		'suggests' => array(),
-	),
-	'_md5_values_when_last_written' => 'a:11:{s:9:"ChangeLog";s:4:"d516";s:12:"ext_icon.gif";s:4:"1bdc";s:17:"ext_localconf.php";s:4:"621c";s:14:"ext_tables.php";s:4:"652c";s:14:"ext_tables.sql";s:4:"83e3";s:33:"icon_tx_meplaceholder_records.gif";s:4:"475a";s:16:"locallang_db.xml";s:4:"fc9a";s:10:"README.txt";s:4:"ee2d";s:7:"tca.php";s:4:"e998";s:19:"doc/wizard_form.dat";s:4:"4184";s:20:"doc/wizard_form.html";s:4:"bf1c";}',
 );
