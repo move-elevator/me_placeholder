@@ -4,7 +4,7 @@ Find marker in source code and replace it with editable content. To edit content
 
 ## Installation
 
-1. just upload and activate the extension 
+1. just upload and activate the extension
 
 ## Configuration
 
@@ -27,6 +27,10 @@ Find marker in source code and replace it with editable content. To edit content
 * Issue-Tracker - https://github.com/move-elevator/me_placeholder
 
 ## Change Log
+
+2015-05-08 Jan Maennig <jma@move-elevator.de>
+
+	* fix composer.json
 
 2015-03-19 Jan Maennig <jma@move-elevator.de>
 
