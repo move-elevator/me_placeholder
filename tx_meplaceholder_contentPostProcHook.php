@@ -1,11 +1,13 @@
 <?php
 
+use \TYPO3\CMS\Core\Utility\GeneralUtility;
+
 /**
  * Class tx_meplaceholder_contentPostProcHook
  */
 class tx_meplaceholder_contentPostProcHook {
 	/**
-	 * @var \tslib_cObj
+	 * @var \TYPO3\CMS\Frontend\ContentObject\ContentObjectRenderer
 	 */
 	protected $contentObject;
 
@@ -24,7 +26,7 @@ class tx_meplaceholder_contentPostProcHook {
 	 */
 	public function __construct() {
 		$this->t3Database = $GLOBALS['TYPO3_DB'];
-		$this->contentObject = t3lib_div::makeInstance('tslib_cObj');
+		$this->contentObject = GeneralUtility::makeInstance('tslib_cObj');
 		if (
 			isset($GLOBALS['TSFE']->tmpl->setup['plugin.']['tx_meplaceholder.'])
 			&& is_array($GLOBALS['TSFE']->tmpl->setup['plugin.']['tx_meplaceholder.'])
@@ -35,7 +37,7 @@ class tx_meplaceholder_contentPostProcHook {
 
 	/**
 	 * @param array $params
-	 * @param \tslib_fe $feObject
+	 * @param \TYPO3\CMS\Frontend\Controller\TypoScriptFrontendController $feObject
 	 * @return void
 	 */
 	public function contentPostProc_output($params, &$feObject) {
