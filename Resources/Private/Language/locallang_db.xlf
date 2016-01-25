@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.0">
+    <file source-language="en" datatype="plaintext" original="messages" date="2016-01-25T10:49:30Z" product-name="me_placeholder">
+        <header/>
+        <body>
+            <trans-unit id="tx_meplaceholder_records">
+                <source>Placeholders</source>
+            </trans-unit>
+            <trans-unit id="tx_meplaceholder_records.placeholder">
+                <source>Placeholder</source>
+            </trans-unit>
+            <trans-unit id="tx_meplaceholder_records.content">
+                <source>Content</source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>
