@@ -26,7 +26,7 @@ class tx_meplaceholder_contentPostProcHook {
 	 */
 	public function __construct() {
 		$this->t3Database = $GLOBALS['TYPO3_DB'];
-		$this->contentObject = GeneralUtility::makeInstance('tslib_cObj');
+		$this->contentObject = GeneralUtility::makeInstance('TYPO3\CMS\Frontend\ContentObject\ContentObjectRenderer');
 		if (
 			isset($GLOBALS['TSFE']->tmpl->setup['plugin.']['tx_meplaceholder.'])
 			&& is_array($GLOBALS['TSFE']->tmpl->setup['plugin.']['tx_meplaceholder.'])

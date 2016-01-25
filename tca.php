@@ -73,24 +73,12 @@ $TCA['tx_meplaceholder_records'] = array(
 		'content' => array(
 			'exclude' => 1,
 			'label' => 'LLL:EXT:me_placeholder/locallang_db.xml:tx_meplaceholder_records.content',
-			'defaultExtras' => 'richtext',
 			'config' => array(
 				'type' => 'text',
-				'eval' => 'required',
-				'rows' => '5',
-				'cols' => 48,
-				'wizards' => array(
-					'_PADDING' => 4,
-					'RTE' => array(
-						'notNewRecords' => 1,
-						'RTEonly' => 1,
-						'type' => 'script',
-						'title' => 'LLL:EXT:cms/locallang_ttc.php:bodytext.W.RTE',
-						'icon' => 'wizard_rte2.gif',
-						'script' => 'wizard_rte.php'
-					)
-				)
-			)
+				'renderType' => 't3editor',
+				'format' => 'html',
+				'rows' => 42,
+			),
 		),
 	),
 	'types' => array(
