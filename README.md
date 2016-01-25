@@ -28,6 +28,11 @@ Find marker in source code and replace it with editable content. To edit content
 
 ## Change Log
 
+2016-01-26 Jan Maennig <jma@move-elevator.de>
+
+	* add TYPO3 7.6 compatibility
+	* update RTE configuration in TCA
+
 2015-05-08 Jan Maennig <jma@move-elevator.de>
 
 	* fix composer.json
