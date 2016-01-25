@@ -11,4 +11,4 @@ $GLOBALS['TYPO3_CONF_VARS']['cms']['db_layout']['addTables']['tx_meplaceholder_r
 	'icon' => TRUE,
 );
 
-$GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['tslib/class.tslib_fe.php']['contentPostProc-output']['tx_meplaceholder'] = 'EXT:me_placeholder/tx_meplaceholder_contentPostProcHook.php:&tx_meplaceholder_contentPostProcHook->contentPostProc_output';
+$GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['tslib/class.tslib_fe.php']['contentPostProc-output']['tx_meplaceholder'] = 'MoveElevator\MePlaceholder\Hooks\ContentPostProcHook->contentPostProc_output';
