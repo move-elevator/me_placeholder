@@ -30,7 +30,10 @@ class ContentPostProcHook {
 	 */
 	public function __construct() {
 		$this->t3Database = $GLOBALS['TYPO3_DB'];
-		$this->contentObject = GeneralUtility::makeInstance('TYPO3\CMS\Frontend\ContentObject\ContentObjectRenderer');
+
+		/** @var \TYPO3\CMS\Extbase\Object\ObjectManager $objectManager */
+		$objectManager = GeneralUtility::makeInstance('TYPO3\CMS\Extbase\Object\ObjectManager');
+		$this->contentObject = $objectManager->get('TYPO3\CMS\Frontend\ContentObject\ContentObjectRenderer');
 
 		if (
 			isset($GLOBALS['TSFE']->tmpl->setup['plugin.']['tx_meplaceholder.'])
