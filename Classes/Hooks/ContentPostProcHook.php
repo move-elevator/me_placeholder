@@ -48,7 +48,7 @@ class ContentPostProcHook {
 	 * @param \TYPO3\CMS\Frontend\Controller\TypoScriptFrontendController $feObject
 	 * @return void
 	 */
-	public function contentPostProc_output($params, &$feObject) {
+	public function processedOutput($params, &$feObject) {
 		if (
 			isset($feObject->config['config']['disable_meplaceholder'])
 			&& $feObject->config['config']['disable_meplaceholder'] === '1'
