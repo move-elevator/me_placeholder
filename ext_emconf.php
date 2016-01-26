@@ -12,20 +12,21 @@
 
 $EM_CONF[$_EXTKEY] = array(
 	'title' => 'm:e Placeholder',
-	'description' => 'Find marker in source code and replace it with editable content. To edit content is a RTE available. For placeholder you can set a storage page id. Furthermore you can individual pages exclude from replacement.',
+	'description' => 'Find marker in source code and replace it with editable content. To edit content is a RTE available. ' .
+		'For placeholder you can set a storage page id. Furthermore you can individual pages exclude from replacement.',
 	'category' => 'fe',
 	'version' => '1.1.0',
 	'state' => 'stable',
-	'uploadfolder' => false,
+	'uploadfolder' => FALSE,
 	'createDirs' => NULL,
-	'clearcacheonload' => false,
+	'clearcacheonload' => FALSE,
 	'author' => 'move:elevator',
 	'author_email' => 'typo3@move-elevator.de',
 	'author_company' => 'move:elevator',
 	'constraints' =>
-		array (
+		array(
 			'depends' =>
-				array (
+				array(
 					'typo3' => '6.2.0-7.6.99'
 				),
 		),
