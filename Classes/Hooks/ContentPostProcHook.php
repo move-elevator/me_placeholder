@@ -1,11 +1,17 @@
 <?php
 
+namespace MoveElevator\MePlaceholder\Hooks;
+
+use \TYPO3\CMS\Core\Utility\GeneralUtility;
+
 /**
- * Class tx_meplaceholder_contentPostProcHook
+ * Class ContentPostProcHook
+ *
+ * @package MoveElevator\MePlaceholder\Hooks
  */
-class tx_meplaceholder_contentPostProcHook {
+class ContentPostProcHook {
 	/**
-	 * @var \tslib_cObj
+	 * @var \TYPO3\CMS\Frontend\ContentObject\ContentObjectRenderer
 	 */
 	protected $contentObject;
 
@@ -15,16 +21,20 @@ class tx_meplaceholder_contentPostProcHook {
 	protected $settings = array();
 
 	/**
-	 * @var \t3lib_DB
+	 * @var \TYPO3\CMS\Core\Database\DatabaseConnection
 	 */
 	protected $t3Database;
 
 	/**
-	 * Initialize tx_meplaceholder_contentPostProcHook
+	 * Initialize ContentPostProcHook
 	 */
 	public function __construct() {
 		$this->t3Database = $GLOBALS['TYPO3_DB'];
-		$this->contentObject = t3lib_div::makeInstance('tslib_cObj');
+
+		/** @var \TYPO3\CMS\Extbase\Object\ObjectManager $objectManager */
+		$objectManager = GeneralUtility::makeInstance('TYPO3\CMS\Extbase\Object\ObjectManager');
+		$this->contentObject = $objectManager->get('TYPO3\CMS\Frontend\ContentObject\ContentObjectRenderer');
+
 		if (
 			isset($GLOBALS['TSFE']->tmpl->setup['plugin.']['tx_meplaceholder.'])
 			&& is_array($GLOBALS['TSFE']->tmpl->setup['plugin.']['tx_meplaceholder.'])
@@ -35,7 +45,7 @@ class tx_meplaceholder_contentPostProcHook {
 
 	/**
 	 * @param array $params
-	 * @param \tslib_fe $feObject
+	 * @param \TYPO3\CMS\Frontend\Controller\TypoScriptFrontendController $feObject
 	 * @return void
 	 */
 	public function contentPostProc_output($params, &$feObject) {
@@ -47,6 +57,7 @@ class tx_meplaceholder_contentPostProcHook {
 		}
 
 		$rows = $this->getPlaceholderFromDatabase();
+
 		foreach ($rows as $row) {
 			$feObject->content = str_replace(
 				'###' . $row['placeholder'] . '###',

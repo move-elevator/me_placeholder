@@ -62,7 +62,7 @@ $TCA['tx_meplaceholder_records'] = array(
 		),
 		'placeholder' => array(
 			'exclude' => 0,
-			'label' => 'LLL:EXT:me_placeholder/locallang_db.xml:tx_meplaceholder_records.placeholder',
+			'label' => 'LLL:EXT:me_placeholder/Resources/Private/Language/locallang_db.xlf:tx_meplaceholder_records.placeholder',
 			'config' => array(
 				'type' => 'input',
 				'size' => '30',
@@ -72,25 +72,15 @@ $TCA['tx_meplaceholder_records'] = array(
 		),
 		'content' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:me_placeholder/locallang_db.xml:tx_meplaceholder_records.content',
+			'label' => 'LLL:EXT:me_placeholder/Resources/Private/Language/locallang_db.xlf:tx_meplaceholder_records.content',
 			'defaultExtras' => 'richtext',
 			'config' => array(
 				'type' => 'text',
 				'eval' => 'required',
 				'rows' => '5',
 				'cols' => 48,
-				'wizards' => array(
-					'_PADDING' => 4,
-					'RTE' => array(
-						'notNewRecords' => 1,
-						'RTEonly' => 1,
-						'type' => 'script',
-						'title' => 'LLL:EXT:cms/locallang_ttc.php:bodytext.W.RTE',
-						'icon' => 'wizard_rte2.gif',
-						'script' => 'wizard_rte.php'
-					)
-				)
-			)
+			),
+			'defaultExtras' => 'richtext[*]'
 		),
 	),
 	'types' => array(
