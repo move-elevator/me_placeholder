@@ -84,7 +84,7 @@ class ContentPostProcHook
             $whereClause .= ' AND pid = ' . intval($this->settings['storagePageId']);
         }
         $placeholder = $this->t3Database->exec_SELECTgetRows(
-            '*',
+            'placeholder,content',
             'tx_meplaceholder_records',
             $whereClause
         );
