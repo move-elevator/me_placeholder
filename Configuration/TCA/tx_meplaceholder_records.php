@@ -73,7 +73,6 @@ $TCA['tx_meplaceholder_records'] = array(
         'content' => array(
             'exclude' => 1,
             'label' => 'LLL:EXT:me_placeholder/Resources/Private/Language/locallang_db.xlf:tx_meplaceholder_records.content',
-            'defaultExtras' => 'richtext',
             'config' => array(
                 'type' => 'text',
                 'eval' => 'required',
