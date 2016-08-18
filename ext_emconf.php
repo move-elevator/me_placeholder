@@ -15,7 +15,7 @@ $EM_CONF[$_EXTKEY] = array(
     'description' => 'Find marker in source code and replace it with editable content. To edit content is a RTE available. ' .
         'For placeholder you can set a storage page id. Furthermore you can individual pages exclude from replacement.',
     'category' => 'fe',
-    'version' => '1.1.2',
+    'version' => '1.1.1',
     'state' => 'stable',
     'uploadfolder' => false,
     'createDirs' => null,
