@@ -27,6 +27,7 @@ Find marker in source code and replace it with editable content. To edit content
 * Issue-Tracker - https://github.com/move-elevator/me_placeholder
 
 ## Change Log
+
 2016-08-18 Sascha Seyfert <sef@move-elevator.de>
 
 	* improve sql query and table scheme
