@@ -14,7 +14,7 @@ CREATE TABLE tx_meplaceholder_records (
 	fe_group int(11) DEFAULT '0' NOT NULL,
 	placeholder varchar(20) DEFAULT '' NOT NULL,
 	content text,
-	
+
 	PRIMARY KEY (uid),
 	KEY parent (pid)
-) ENGINE=InnoDB;
+);
