@@ -28,11 +28,14 @@ Find marker in source code and replace it with editable content. To edit content
 
 ## Change Log
 
+2016-08-18 Hendrik Papmahl <hpa@move-elevator.de>
+
+	* 1.1.2 - fix icon path
+
 2016-08-18 Sascha Seyfert <sef@move-elevator.de>
 
 	* improve sql query and table scheme
 	* change codestyle
-
 
 2016-01-26 Jan Maennig <jma@move-elevator.de>
 
