@@ -22,7 +22,6 @@ $TCA['tx_meplaceholder_records'] = array(
         ),
         'dynamicConfigFile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath($_EXTKEY) .
             'Configuration/TCA/tx_meplaceholder_records.php',
-        'iconfile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath($_EXTKEY) .
-            'Resources/Public/Icons/tx_meplaceholder_records.gif',
+        'iconfile' => 'EXT:me_placeholder/Resources/Public/Icons/tx_meplaceholder_records.gif',
     ),
 );
